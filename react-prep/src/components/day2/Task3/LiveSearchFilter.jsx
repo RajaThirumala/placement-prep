@@ -8,8 +8,8 @@ const LiveSearchFilter = () => {
     "Ball",
     "Ring",
     "MuskaBun",
-    "CarDikki",
-    "BackSeatLo....",
+    "chai",
+    "Biryani",
   ];
 
   const filteredList = items.filter((item) =>
