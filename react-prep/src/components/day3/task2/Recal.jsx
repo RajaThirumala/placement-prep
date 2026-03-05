@@ -1,11 +1,11 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 
 const Recal = () => {
   const [theme, setTheme] = useState("Light");
   const [input, setInput] = useState(0);
 
   const sum = useMemo(() => {
-    console.log("Inside");
+    console.log("Inside function");
 
     let total = 0;
     for (let i = 0; i < input; i++) {
@@ -16,6 +16,14 @@ const Recal = () => {
 
     return total;
   }, [input]);
+  useEffect(() => {
+  console.log("Mounted");
+}, []);
+useEffect(() => {
+  console.log("input changed");
+}, [input]);
+
+console.log("Render happened");
 
   return (
     <>
